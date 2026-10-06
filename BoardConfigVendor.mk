@@ -3,4 +3,18 @@
 #
 
 AB_OTA_PARTITIONS += \
-    gpueb
+    dpm \
+    dtbo \
+    gpueb \
+    gz \
+    lk \
+    logo \
+    mcupm \
+    md1img \
+    pi_img \
+    preloader \
+    scp \
+    spmfw \
+    sspm \
+    tee \
+    vcp
