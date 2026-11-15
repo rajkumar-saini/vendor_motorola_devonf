@@ -171,21 +171,11 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/devonf/proprietary/vendor/etc/audio_param/Volume_ParamUnitDesc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/Volume_ParamUnitDesc.xml \
     vendor/motorola/devonf/proprietary/vendor/etc/aurisys_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/aurisys_config.xml \
     vendor/motorola/devonf/proprietary/vendor/etc/aurisys_config_rv.xml:$(TARGET_COPY_OUT_VENDOR)/etc/aurisys_config_rv.xml \
-    vendor/motorola/devonf/proprietary/vendor/etc/bt_stack_debug.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bt_stack_debug.conf \
-    vendor/motorola/devonf/proprietary/vendor/etc/bt_stack_level6.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bt_stack_level6.conf \
     vendor/motorola/devonf/proprietary/vendor/etc/cust_color.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cust_color.xml \
     vendor/motorola/devonf/proprietary/vendor/etc/default_pd_calibration.bin:$(TARGET_COPY_OUT_VENDOR)/etc/default_pd_calibration.bin \
     vendor/motorola/devonf/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
     vendor/motorola/devonf/proprietary/vendor/etc/dual_golden_wide.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dual_golden_wide.bin \
     vendor/motorola/devonf/proprietary/vendor/etc/ecc_list.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list.xml \
-    vendor/motorola/devonf/proprietary/vendor/etc/ecc_list_OP01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP01.xml \
-    vendor/motorola/devonf/proprietary/vendor/etc/ecc_list_OP02.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP02.xml \
-    vendor/motorola/devonf/proprietary/vendor/etc/ecc_list_OP09.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP09.xml \
-    vendor/motorola/devonf/proprietary/vendor/etc/ecc_list_OP12.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP12.xml \
-    vendor/motorola/devonf/proprietary/vendor/etc/ecc_list_OP17.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP17.xml \
-    vendor/motorola/devonf/proprietary/vendor/etc/ecc_list_OP18.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP18.xml \
-    vendor/motorola/devonf/proprietary/vendor/etc/ecc_list_OP20.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP20.xml \
-    vendor/motorola/devonf/proprietary/vendor/etc/ecc_list_OP236.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP236.xml \
     vendor/motorola/devonf/proprietary/vendor/etc/ecc_list_preference.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_preference.xml \
     vendor/motorola/devonf/proprietary/vendor/etc/gnss/agps_profiles_conf2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/agps_profiles_conf2.xml \
     vendor/motorola/devonf/proprietary/vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_Mexico.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_Mexico.xml \
@@ -267,8 +257,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/devonf/proprietary/vendor/etc/init/vendor.mmi.carrier.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mmi.carrier.rc \
     vendor/motorola/devonf/proprietary/vendor/etc/init/vendor.mmi.cxp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mmi.cxp.rc \
     vendor/motorola/devonf/proprietary/vendor/etc/init/vendor.trustonic.tee@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.trustonic.tee@1.1-service.rc \
-    vendor/motorola/devonf/proprietary/vendor/etc/init/volte_clientapi_ua.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/volte_clientapi_ua.rc \
-    vendor/motorola/devonf/proprietary/vendor/etc/init/wlan_assistant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wlan_assistant.rc \
     vendor/motorola/devonf/proprietary/vendor/etc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
     vendor/motorola/devonf/proprietary/vendor/etc/libnfc-nci_100.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci_100.conf \
     vendor/motorola/devonf/proprietary/vendor/etc/libnfc-nci_220.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci_220.conf \
@@ -643,6 +631,7 @@ PRODUCT_PACKAGES += \
     lib_ainr_enh \
     libaal_key \
     libadropbox \
+    libapmonitor_vendor \
     libappgamepq \
     libapu_mdw \
     libapu_mdw_batch \
@@ -670,7 +659,7 @@ PRODUCT_PACKAGES += \
     libdre \
     libdynamiclog \
     libfile_op \
-    libformatter \
+    libformatter-mtk \
     libged \
     libgpu_aux \
     libgpud \
@@ -683,14 +672,11 @@ PRODUCT_PACKAGES += \
     libhevce_sb.ca7.android \
     libicd_decoder \
     libimgsensorca \
-    libion_mtk \
-    libion_ulit \
     libipsec_ims_shr \
     libiqi_bridge \
     libispcameraca \
     libjpeg-alpha-oal_vendor \
     libjpeg-alpha_vendor \
-    libladder \
     liblog_vendor \
     libminiui \
     libmml \
@@ -719,9 +705,7 @@ PRODUCT_PACKAGES += \
     libmvpu_runtime_pub \
     libmvpuop_mtk_cv \
     libmvpuop_mtk_nn \
-    libneuroeara \
     libneuron_graph_delegate.mtk \
-    libneuropilot_hal_utils \
     libnir_neon_driver_ndk.mtk.vndk \
     libnpagent \
     libnvram \
@@ -819,10 +803,10 @@ PRODUCT_PACKAGES += \
     mtk000_mipi_raw_IdxMgr \
     mtk000_mipi_raw_tuning \
     libdlbvol \
-    libspatialaudio \
     libswdap \
     libswgamedap \
     vendor.dolby.hardware.dms@2.0 \
+    vendor.mediatek.hardware.apmonitor@2.0 \
     vendor.mediatek.hardware.apuware.utils@2.0 \
     vendor.mediatek.hardware.camera.atms@1.0 \
     vendor.mediatek.hardware.camera.bgservice@1.0 \
@@ -873,8 +857,7 @@ PRODUCT_PACKAGES += \
     libmp3dec_mtk \
     libmp4enc_sa.ca7 \
     libmp4enc_xa.ca7 \
-    librcs_interface \
-    librcs_volte_core \
+    libneuropilot_hal_utils \
     libvcodec_utility_plat.mt6789 \
     libvcodec_utility_plat.mt6855 \
     libvcodec_utility_plat.mt6879 \
@@ -887,11 +870,10 @@ PRODUCT_PACKAGES += \
     libvcodecdrv \
     libvcodecdrv_v3a \
     libvpudv3a_vcodec \
-    vendor.mediatek.hardware.apmonitor@2.0 \
-    vendor.mediatek.hardware.rcs@2.0 \
     APUWareApusysServer \
     APUWareHmpServer \
     APUWareUtilsServer \
+    android.hardware.audio@7.0-util-v32 \
     com.fingerprints.extension@1.0 \
     com.motorola.hardware.biometric.fingerprint@1.0 \
     ese_client \
@@ -914,7 +896,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.camera.isphal@1.1-impl \
     vendor.mediatek.hardware.camera.lomoeffect@1.0-impl \
     sensors.mediatek.V2.0 \
-    vendor.mediatek.hardware.bluetooth.audio@2.2-impl \
     vendor.mediatek.hardware.keymaster_attestation@1.1-impl \
     vendor.mediatek.hardware.videotelephony@1.0-impl \
     jcos_client \
@@ -952,12 +933,8 @@ PRODUCT_PACKAGES += \
     libawinic_mtk_aurisys \
     libbessound_hd_mtk_vendor \
     libblisrc32_vendor \
-    libbluetooth_audio_session_mediatek \
-    libbluetooth_hw_test \
     libbluetooth_mtk \
     libbluetooth_mtk_pure \
-    libbluetooth_relayer \
-    libbluetoothem_mtk \
     libbt-vendor \
     libcam.seninfn3d \
     libcamalgo.3dnr \
@@ -1023,7 +1000,6 @@ PRODUCT_PACKAGES += \
     libmtksysutils \
     libmtktinyxml \
     libmtkutils \
-    libneuron_platform \
     libnpagent_server \
     liboemcrypto \
     libpn557_fw \
@@ -1154,7 +1130,7 @@ PRODUCT_PACKAGES += \
     libimageio_plat_pipe \
     liblpcnr \
     libmfllcore \
-    libmnl \
+    libmnl-mtk \
     libmsnr \
     libmtkcam.debugwrapper \
     libmtkcam.featurepipe.capture \
@@ -1230,7 +1206,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.camera.lomoeffect@1.0 \
     vendor.mediatek.hardware.camera.postproc@1.0 \
     vendor.mediatek.hardware.camera.security@1.0 \
-    vendor.mediatek.hardware.clientapi@1.0 \
     vendor.mediatek.hardware.composer_ext@1.0 \
     vendor.mediatek.hardware.keymaster_attestation@1.0 \
     vendor.mediatek.hardware.keymaster_attestation@1.1 \
@@ -1261,6 +1236,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.videotelephony@1.0 \
     ImsService \
     MtkGbaService \
+    MtkTelephonyAssist \
     mediatek-common \
     mediatek-framework \
     mediatek-ims-base \
@@ -1284,9 +1260,7 @@ PRODUCT_PACKAGES += \
     manifest_media_c2_V1_2_default.xml \
     manifest_vendor.dolby.hardware.dms.xml \
     SN1X0__RF-On.txt \
-    autobt \
     bip_ap \
-    bt_dump \
     ccci_fsd \
     ccci_mdinit \
     ccci_rpcd \
@@ -1335,7 +1309,6 @@ PRODUCT_PACKAGES += \
     mnld \
     motobox \
     mt6660_calibration \
-    jpegtool \
     v3avpud.mt6855 \
     mtk_agpsd \
     muxreport \
@@ -1344,17 +1317,13 @@ PRODUCT_PACKAGES += \
     pnscr \
     pnscr_cal \
     pstore_annotate \
-    rcs_volte_stack \
     rt5512_calibration \
     sns_mot_client \
     stp_dump3 \
     vendor.mmi.cxp \
-    volte_clientapi_ua \
-    volte_rcs_ua \
     vpud \
     wifi_dump \
     wifitest \
-    wlan_assistant \
     wmt_launcher \
     wmt_loader \
     vtservice
@@ -1363,7 +1332,6 @@ PRODUCT_PACKAGES += \
     vendor_bin_hw_android_hardware_graphics_allocator@4_0-service-mediatek \
     vendor_bin_hw_camerahalserver \
     vendor_bin_expat \
-    vendor_bin_jpegtool \
     vendor_bin_v3avpud \
     vendor_lib_egl_libEGL_mtk_so \
     vendor_lib_egl_libGLESv1_CM_mtk_so \
@@ -1607,7 +1575,7 @@ PRODUCT_PACKAGES += \
     vendor_lib64_libimageio_plat_pipe_so \
     vendor_lib64_liblpcnr_so \
     vendor_lib64_libmfllcore_so \
-    vendor_lib64_libmnl_so \
+    vendor_lib64_libmnl-mtk_so \
     vendor_lib64_libmpvr_so \
     vendor_lib64_libmsnr_so \
     vendor_lib64_libmtk_drvb_so \
